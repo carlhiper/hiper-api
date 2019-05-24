@@ -1,0 +1,192 @@
+{
+    "Code": "se_SV",
+    "Menu": {
+        "FEED": "FLÖDE",
+        "SCOREBOARD": "MÅLTAVLA",
+        "TEAM": "TEAM",
+        "PRIVATETEAM": "Privat"
+    },
+    "Login": {
+        "Email": "EMAIL...",
+        "Password": "LÖSENORD...",
+        "Login": "LOGIN...",
+        "Submit": "LOGIN",
+        "CreateUser": "SKAPA ANVÄNDARE",
+        "ResetPassword": "ÅTERSTÄLL LÖSENORD",
+        "LoginError": "FEL NAMN ELLER LÖSENORD",
+        "Resend": "RESEND"
+
+    },
+    "CreateProfile": {
+        "FIRSTNAME": "FÖRNAMN*...",
+        "LASTNAME": "EFTERNAMN*...",
+        "TITLE": "TITEL...",
+        "COMPANY": "FÖRETAG...",
+        "NICKNAME": "SMEKNAMN...",
+        "EMAIL": "EMAIL*...",
+        "PASSWORD": "LÖSENORD*...",
+        "CONFIRMPASSWORD": "BEKRÄFTA LÖSENORD*...",
+        "ADDPICTURE": "LÄGG TILL BILD*...",
+        "CREATEUSER": "SKAPA ANVÄNDARE",
+        "ErrorRequired": "Fältet {namn} är inte korrekt ifyllt",
+        "ErrorInvalidEmail": "Angiven e-mail har fel format",
+        "ErrorPasswordMin": "Lösenordet ska bestå av minst 6 tecken",
+        "ErrorEmailTaken": "En användare med samma e-mail finns redan. Vill du återställa lösenordet ?"
+    },
+    "CreateTeam": {
+        "TEAMNAME": "TEAM NAMN*...",
+        "PASSWORD": "LÖSENORD*...",
+        "COMPANY": "FÖRETAG*...",
+        "ORGNUMBER": "ORG. NUMMER*...",
+        "INVITE": "LÄGG TILL INBJUDAN",
+        "REMOVEINVITE": "TA BORT INBJUDAN”",
+        "BILLINGADDRESS": "FAKTURERINGSADRESS*...",
+        "EMAIL": "EMAIL...",
+        "TEAMMEMBERS": "TEAM MEMBERS",
+        "CREATETEAM": "SKAPA TEAM",
+        "DONE": "KLAR"
+    },
+    "CreateJoinTeam": {
+        "CREATEBUISINESS": "CREATE BUSINESS TEAM",
+        "CREATESTARTUP": "CREATE STARTUP TEAM*",
+        "CREATETEAM": "SKAPA TEAM",
+        "JOINTEAM": "ANSLUT TILL TEAM",
+        "JOINLATER": "ANSLUT EJ",
+        "CANCEL": "AVBRYT"
+
+    },
+    "JoinTeam": {
+        "JOINTEAM": "ANSLUT TILL TEAM",
+        "TEAMNAME": "TEAM NAMN",
+        "PASSWORD": "LÖSENORD",
+        "WRONGNAME": "OR PW FEL NAMN ELLER LÖSENORD",
+        "ErrorLoginError": "Felaktigt namn eller lösenord."
+    },
+    "UserProfile": {
+        "GOALS": "MÅL",
+        "LEAVE": "LÄMNA",
+        "PROFILE": "PROFIL",
+        "EDIT": "ÄNDRA",
+        "TEAMS": "TEAM",
+        "ADDTEAM": "LÄGG TILL TEAM",
+        "DeleteTeamOptions": "TA BORT TEAM",
+        "DELETETEAMTITLE": "Ta bort team",
+        "JoinTeamSuccess": "Din ansökan till teamet har skickats till teamadministratören.",
+        "JoinTeamSuccess": "Är du säker på att du vill lämna team",
+        "DeleteTeamSuccess": "Du har lämnat team",
+          "ClickToView": "(Click to view)"
+    },
+    "Team": {
+        "ADDGOAL": "SÄTT MÅL",
+        "ADDMEMBER": "LÄGG TILL MEDLEM",
+        "DELETEMEMBER": "TA BORT MEDLEM",
+         "INVITEMEMBER": "BJUD IN ANVÄNDARE",
+        "APPLICANT": "GODKÄNN ANSÖKAN",
+        "CreateGoal": "SKAPA MÅL",
+        "TeamOptions": "TEAM OPTIONS",
+        "AddMemberApplicants": "är nu med i team",
+        "AddMemberInviteTitle": "BJUD IN ANVÄNDARE",
+        "AddMemberInviteOk": "Inbjudan har skickats till",
+        "AddMemberInviteFailed": "Misslyckades att bjuda in",
+        "DeleteMemberTitle": "TA BORT MEDLEMMAR",
+        "DeleteMemberText": "Är du säker på att du vill ta bort",
+        "DeleteMemberOk": "är ej längre med i team"
+    },
+    "Goal": {
+        "Goal": "MÅL",
+        "Description": "MÅLBESKRIVNING...",
+        "AdditionalInfo": "ÖVRIG INFORMATION...",
+        "Reached": "UPPNÅDD...",
+        "Total": "TOTALT...",
+        "Target": "mål",
+        "DateFormat": "yyyy-MM-dd",
+        "Save": "SPARA",
+        "Abort": "AVBRYT",
+        "CreatedOk": "Ditt mål har skapats",
+        "Deadline": "SÄTT DEADLINE..."
+    },
+    "StatusOfGoal": {
+        "All": "Alla",
+        "Active": "Aktiv",
+        "Cancel": "Avbryt",
+        "Achieved": "Uppnådde",
+        "Didntachieved": "Uppnådde ej"
+    },
+    "TypeOfUpdate": {
+        "All": "Alla",
+        "AddedGoal": "Lade till ett mål!",
+        "AchievedGoal": "Nådde sitt mål!",
+        "DidntAchievedGoal": "Didn't achieve the goal",
+        "CancelledGoal": "Tog bort ett mål",
+        "IsNewMember": "Är en ny team medlem!",
+        "LeftTeam": "Lämnade teamet",
+        "ReceivedNewGoal": "Nytt team mål!",
+        "MissedDeadline": "Missade en milstolpe!",
+        "OneWeekLeft": " har en vecka kvar!",
+        "ThreeDaysLeft": "Har tre dagar kvar",
+        "OneDayLeft": "Har en dag kvar",
+        "Achieved25ofGoal": "Har klarat 25% av målet!",
+        "Achieved50ofGoal": "Har klarat 50% av målet!",
+        "Achieved75ofGoal": "Har klarat 75% av målet!"
+
+    },
+    "TypeOfGoal": {
+        "All": "Alla",
+        "succeed/fail": "Ja/nej",
+        "number": "Nummer"
+    },
+    "Scoreboard": {
+        "Empty": "Tomt personligt mål",
+        "EmptyTeam": "Tomt teammål",
+        "Deadline": "Deadline",
+        "Days": "dagar", 
+        "Current": "AKTIV",
+        "History": "HISTORIK",
+        "Statistic": "STATISTIK",
+        "Ihadenoughtime": "JAG HADE TILLRÄCKLIGT MED TID",
+        "Ihadtherightskills": "JAG HADE RÄTT FÄRDIGHETER",
+        "Ihadenoughsupport": "JAG FICK TILLRÄCKLIGT MED STÖD",
+        "Ihadenoughresources": "JAG HADE TILLRÄCKLIGT MED RESURSER",
+        "Last": "Last day"
+
+        
+    },
+    "Filter": {
+        "Filter": "FILTER",
+        "goalcreated": "Mål skapat",
+        "deadline": "Milstolpe",
+        "filter": "Filter",
+        "feedback": "Feedback",
+        "status": "Status",
+        "teammember": "Teammedlem",
+        "typeofgoal": "Typ av mål",
+        "TypeOfUpdate": "Typ av uppdatering",
+        "timespan": "Tidsperiod",
+        "all": "Alla",
+        "DateFormat": "yyyy/mm/dd",
+        "SelectTypeOfGoal": "Välj typ av mål",
+        "SelectTypeOfUpdate": "Välj typ av uppdatering",
+        "SelectTeamMember": "Välj teammedlem",
+        "Abort": "AVBRYT",
+        "Save": "SPARA"
+
+    },
+    "Messages": {
+        "WRONGNAMEORPASSWORD": "FEL NAMN ELLER LÖSENORD",
+        "INVALIDINPUT": "FELAKTIG INMATNING",
+        "AREYOUSURE": "ÄR DU SÄKER?"
+    },
+    "Repeats": {
+        "1day": "1 dag",
+        "1week": "1 vecka",
+        "1month": "1 månad",
+        "Norepeat": "ej återkommande"
+    },
+    "Feedbacks": {
+        "All": "Alla",
+        "Ihadenoughtime": "Jag hade tillräckligt med tid",
+        "Ihadtherightskills": "Jag hade rätt färdigheter",
+        "Ihadenoughsupport": "Jag fick tillräckligt med stöd",
+        "Ihadenoughresources": "Jag hade tillräckligt med resurser"
+    }
+}

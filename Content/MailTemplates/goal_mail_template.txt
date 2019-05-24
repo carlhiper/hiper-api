@@ -1,0 +1,5 @@
+<p dir="ltr" style="margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;"><strong><span style="color: rgb(0, 0, 0); font-family: verdana, geneva, sans-serif; font-size: 11px; line-height: 15.18px; background-color: rgb(217, 217, 217);">%goal%</span></strong></p>
+
+<p dir="ltr" style="margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;"><span style="font-family:verdana,geneva,sans-serif;"><span style="font-size:11px;">Days left to deadline: %days_to deadline%</span></span></p>
+
+<p dir="ltr" style="margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;"><span style="font-family:verdana,geneva,sans-serif;"><span style="font-size:11px;">Numerical goal progress: %current_amount% / %target_amount%</span></span></p>

@@ -1,0 +1,579 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FE520B6C-5CD8-46A7-9A87-619C1F09DC5A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hiper.Api</RootNamespace>
+    <AssemblyName>Hiper.Api</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <IncludeIisSettings>false</IncludeIisSettings>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.0.4.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.0.4\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageProcessor, Version=2.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImageProcessor.2.3.2.0\lib\net45\ImageProcessor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.AppService.ApiApps.Service, Version=0.9.16.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.AppService.ApiApps.Service.0.9.16\lib\net45\Microsoft.Azure.AppService.ApiApps.Service.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors">
+      <HintPath>..\packages\Microsoft.Owin.Cors.3.0.1\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="SendGrid.SmtpApi, Version=1.3.1.0, Culture=neutral, PublicKeyToken=2ae73662c35d80e4, processorArchitecture=MSIL">
+      <HintPath>..\packages\SendGrid.SmtpApi.1.3.1\lib\net40\SendGrid.SmtpApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SendGridMail, Version=6.1.0.0, Culture=neutral, PublicKeyToken=2ae73662c35d80e4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sendgrid.6.1.0\lib\SendGridMail.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Swashbuckle.Core.5.0.0\lib\net40\Swashbuckle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.4.0.0\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Cors">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.0.0\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http.Owin, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0.6\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\Team\teamPicture.jpg" />
+    <Content Include="Content\MailTemplates\active_goals_part_mail_template.html" />
+    <Content Include="Content\MailTemplates\admin_team_creation_template.html" />
+    <Content Include="Content\MailTemplates\auto_reply_template.html" />
+    <Content Include="Content\MailTemplates\confirmation_mail_template.html" />
+    <Content Include="Content\MailTemplates\deadline_goals_part_mail_template.html" />
+    <Content Include="Content\MailTemplates\feedbacks_goals_part_mail_template.html" />
+    <Content Include="Content\MailTemplates\goals_part_mail_template.html" />
+    <Content Include="Content\MailTemplates\goal_mail_template.txt" />
+    <Content Include="Content\MailTemplates\invite_to_team_template.html" />
+    <Content Include="Content\MailTemplates\password_changed_template.html" />
+    <Content Include="Content\MailTemplates\reset_passwrod_template.html" />
+    <Content Include="Content\MailTemplates\team_deadlines_part_mail_template.html" />
+    <Content Include="Content\MailTemplates\team_feedbacks_part_mail_template.html" />
+    <Content Include="Content\MailTemplates\team_goals_part_mail_template.html" />
+    <Content Include="Content\MailTemplates\team_info_part_mail_template.html" />
+    <Content Include="Content\MailTemplates\update_manager_template.html" />
+    <Content Include="Content\MailTemplates\update_member_template.html" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Metadata\deploymentTemplates\apiappconfig.azureresource.json" />
+    <Content Include="Content\Images\UserLogos\1" />
+    <Content Include="Content\Locales\locale-en_US.json" />
+    <Content Include="Content\Locales\locale-sv_SE.json" />
+    <None Include="Properties\PublishProfiles\hiperdevapieu.pubxml" />
+    <None Include="Properties\PublishProfiles\hiperliveapi.pubxml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppContext.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="AutoMapperConfig.cs" />
+    <Compile Include="Controllers\AccountController .cs" />
+    <Compile Include="Controllers\FeedController.cs" />
+    <Compile Include="Controllers\GoalController.cs" />
+    <Compile Include="Controllers\ImageController.cs" />
+    <Compile Include="Controllers\LocalController.cs" />
+    <Compile Include="Controllers\ScoreboardController.cs" />
+    <Compile Include="Controllers\TeamController.cs" />
+    <Compile Include="Controllers\WebJobController.cs" />
+    <Compile Include="Helpers\DateHelper.cs" />
+    <Compile Include="Helpers\FileResult.cs" />
+    <Compile Include="Helpers\MailHelper.cs" />
+    <Compile Include="Helpers\Services\EmailService.cs" />
+    <Compile Include="Helpers\UploadHelper.cs" />
+    <Compile Include="Migrations\201509231111149_FirstMigration.cs" />
+    <Compile Include="Migrations\201509231111149_FirstMigration.Designer.cs">
+      <DependentUpon>201509231111149_FirstMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510021545360_Teams.cs" />
+    <Compile Include="Migrations\201510021545360_Teams.Designer.cs">
+      <DependentUpon>201510021545360_Teams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510050840180_TestProf.cs" />
+    <Compile Include="Migrations\201510050840180_TestProf.Designer.cs">
+      <DependentUpon>201510050840180_TestProf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510061224583_userid.cs" />
+    <Compile Include="Migrations\201510061224583_userid.Designer.cs">
+      <DependentUpon>201510061224583_userid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510061226086_useridn.cs" />
+    <Compile Include="Migrations\201510061226086_useridn.Designer.cs">
+      <DependentUpon>201510061226086_useridn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510061405063_goals.cs" />
+    <Compile Include="Migrations\201510061405063_goals.Designer.cs">
+      <DependentUpon>201510061405063_goals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510071221466_dailychanges.cs" />
+    <Compile Include="Migrations\201510071221466_dailychanges.Designer.cs">
+      <DependentUpon>201510071221466_dailychanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510071232281_dailychanges1.cs" />
+    <Compile Include="Migrations\201510071232281_dailychanges1.Designer.cs">
+      <DependentUpon>201510071232281_dailychanges1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510071257476_goalnull.cs" />
+    <Compile Include="Migrations\201510071257476_goalnull.Designer.cs">
+      <DependentUpon>201510071257476_goalnull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510071259106_goalnull1.cs" />
+    <Compile Include="Migrations\201510071259106_goalnull1.Designer.cs">
+      <DependentUpon>201510071259106_goalnull1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510081242071_many.cs" />
+    <Compile Include="Migrations\201510081242071_many.Designer.cs">
+      <DependentUpon>201510081242071_many.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510120705398_goalmany.cs" />
+    <Compile Include="Migrations\201510120705398_goalmany.Designer.cs">
+      <DependentUpon>201510120705398_goalmany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510190834214_feed.cs" />
+    <Compile Include="Migrations\201510190834214_feed.Designer.cs">
+      <DependentUpon>201510190834214_feed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510191204217_feedAdd.cs" />
+    <Compile Include="Migrations\201510191204217_feedAdd.Designer.cs">
+      <DependentUpon>201510191204217_feedAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510191220247_modelsAsDesc.cs" />
+    <Compile Include="Migrations\201510191220247_modelsAsDesc.Designer.cs">
+      <DependentUpon>201510191220247_modelsAsDesc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510191236287_modelsAsDescr.cs" />
+    <Compile Include="Migrations\201510191236287_modelsAsDescr.Designer.cs">
+      <DependentUpon>201510191236287_modelsAsDescr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510201353453_latest.cs" />
+    <Compile Include="Migrations\201510201353453_latest.Designer.cs">
+      <DependentUpon>201510201353453_latest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510211354486_daily.cs" />
+    <Compile Include="Migrations\201510211354486_daily.Designer.cs">
+      <DependentUpon>201510211354486_daily.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510291045188_feedHipes.cs" />
+    <Compile Include="Migrations\201510291045188_feedHipes.Designer.cs">
+      <DependentUpon>201510291045188_feedHipes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510291050216_feedHipesNull.cs" />
+    <Compile Include="Migrations\201510291050216_feedHipesNull.Designer.cs">
+      <DependentUpon>201510291050216_feedHipesNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510291052461_feedHipesNullAll.cs" />
+    <Compile Include="Migrations\201510291052461_feedHipesNullAll.Designer.cs">
+      <DependentUpon>201510291052461_feedHipesNullAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511301055122_feedCreated.cs" />
+    <Compile Include="Migrations\201511301055122_feedCreated.Designer.cs">
+      <DependentUpon>201511301055122_feedCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511301057003_goalDescr.cs" />
+    <Compile Include="Migrations\201511301057003_goalDescr.Designer.cs">
+      <DependentUpon>201511301057003_goalDescr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512010747404_userlang.cs" />
+    <Compile Include="Migrations\201512010747404_userlang.Designer.cs">
+      <DependentUpon>201512010747404_userlang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512011059079_hipes.cs" />
+    <Compile Include="Migrations\201512011059079_hipes.Designer.cs">
+      <DependentUpon>201512011059079_hipes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512011115190_hipess.cs" />
+    <Compile Include="Migrations\201512011115190_hipess.Designer.cs">
+      <DependentUpon>201512011115190_hipess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512071106514_applicants.cs" />
+    <Compile Include="Migrations\201512071106514_applicants.Designer.cs">
+      <DependentUpon>201512071106514_applicants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512071516240_teamGoalKey.cs" />
+    <Compile Include="Migrations\201512071516240_teamGoalKey.Designer.cs">
+      <DependentUpon>201512071516240_teamGoalKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512211326073_orgnumber.cs" />
+    <Compile Include="Migrations\201512211326073_orgnumber.Designer.cs">
+      <DependentUpon>201512211326073_orgnumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512221159524_disableteams.cs" />
+    <Compile Include="Migrations\201512221159524_disableteams.Designer.cs">
+      <DependentUpon>201512221159524_disableteams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512241452009_hipe.cs" />
+    <Compile Include="Migrations\201512241452009_hipe.Designer.cs">
+      <DependentUpon>201512241452009_hipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512291016519_shareProfile.cs" />
+    <Compile Include="Migrations\201512291016519_shareProfile.Designer.cs">
+      <DependentUpon>201512291016519_shareProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512300812457_shareOff.cs" />
+    <Compile Include="Migrations\201512300812457_shareOff.Designer.cs">
+      <DependentUpon>201512300812457_shareOff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601061319346_hipeCreationDate.cs" />
+    <Compile Include="Migrations\201601061319346_hipeCreationDate.Designer.cs">
+      <DependentUpon>201601061319346_hipeCreationDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601141052361_amountFeed.cs" />
+    <Compile Include="Migrations\201601141052361_amountFeed.Designer.cs">
+      <DependentUpon>201601141052361_amountFeed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601220848541_goalTypes.cs" />
+    <Compile Include="Migrations\201601220848541_goalTypes.Designer.cs">
+      <DependentUpon>201601220848541_goalTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AdvancedStatisitcsViewModel.cs" />
+    <Compile Include="Models\ApprouveUsersViewModel.cs" />
+    <Compile Include="Models\DeleteTeamsForUserViewModel.cs" />
+    <Compile Include="Models\Enums\GoalTypeEnum.cs" />
+    <Compile Include="Models\Enums\RepeatEnum.cs" />
+    <Compile Include="Models\Enums\StatusGoalEnum.cs" />
+    <Compile Include="Models\Enums\SurveyEnum.cs" />
+    <Compile Include="Models\Enums\UpdateTypeEnum.cs" />
+    <Compile Include="Models\FilterViewModel.cs" />
+    <Compile Include="Models\GoalCreateViewModel.cs" />
+    <Compile Include="Models\GoalModel.cs" />
+    <Compile Include="Models\GoalTypeModel.cs" />
+    <Compile Include="Models\GoalViewModel.cs" />
+    <Compile Include="Models\HipeModel.cs" />
+    <Compile Include="Models\RemoveUsersViewModel.cs" />
+    <Compile Include="Models\RepeatModel.cs" />
+    <Compile Include="Models\ScoreboardViewModel.cs" />
+    <Compile Include="Models\StatusGoalModel.cs" />
+    <Compile Include="Models\SurveyModel.cs" />
+    <Compile Include="Models\TeamFeedModel.cs" />
+    <Compile Include="Models\TeamModel.cs" />
+    <Compile Include="Models\ProfileModel.cs" />
+    <Compile Include="Models\TeamTypesModel.cs" />
+    <Compile Include="Models\UpdateTypeModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\AuthorizationServerProvider.cs" />
+    <Compile Include="Repositories\GoalRepository.cs" />
+    <Compile Include="Repositories\HipeRepository.cs" />
+    <Compile Include="Repositories\TeamFeedRepository.cs" />
+    <Compile Include="Repositories\UserRepository .cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\TeamRepository.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201509231111149_FirstMigration.resx">
+      <DependentUpon>201509231111149_FirstMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510021545360_Teams.resx">
+      <DependentUpon>201510021545360_Teams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510050840180_TestProf.resx">
+      <DependentUpon>201510050840180_TestProf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510061224583_userid.resx">
+      <DependentUpon>201510061224583_userid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510061226086_useridn.resx">
+      <DependentUpon>201510061226086_useridn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510061405063_goals.resx">
+      <DependentUpon>201510061405063_goals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510071221466_dailychanges.resx">
+      <DependentUpon>201510071221466_dailychanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510071232281_dailychanges1.resx">
+      <DependentUpon>201510071232281_dailychanges1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510071257476_goalnull.resx">
+      <DependentUpon>201510071257476_goalnull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510071259106_goalnull1.resx">
+      <DependentUpon>201510071259106_goalnull1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510081242071_many.resx">
+      <DependentUpon>201510081242071_many.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510120705398_goalmany.resx">
+      <DependentUpon>201510120705398_goalmany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510190834214_feed.resx">
+      <DependentUpon>201510190834214_feed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510191204217_feedAdd.resx">
+      <DependentUpon>201510191204217_feedAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510191220247_modelsAsDesc.resx">
+      <DependentUpon>201510191220247_modelsAsDesc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510191236287_modelsAsDescr.resx">
+      <DependentUpon>201510191236287_modelsAsDescr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510201353453_latest.resx">
+      <DependentUpon>201510201353453_latest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510211354486_daily.resx">
+      <DependentUpon>201510211354486_daily.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510291045188_feedHipes.resx">
+      <DependentUpon>201510291045188_feedHipes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510291050216_feedHipesNull.resx">
+      <DependentUpon>201510291050216_feedHipesNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510291052461_feedHipesNullAll.resx">
+      <DependentUpon>201510291052461_feedHipesNullAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511301055122_feedCreated.resx">
+      <DependentUpon>201511301055122_feedCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511301057003_goalDescr.resx">
+      <DependentUpon>201511301057003_goalDescr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512010747404_userlang.resx">
+      <DependentUpon>201512010747404_userlang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512011059079_hipes.resx">
+      <DependentUpon>201512011059079_hipes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512011115190_hipess.resx">
+      <DependentUpon>201512011115190_hipess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512071106514_applicants.resx">
+      <DependentUpon>201512071106514_applicants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512071516240_teamGoalKey.resx">
+      <DependentUpon>201512071516240_teamGoalKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512211326073_orgnumber.resx">
+      <DependentUpon>201512211326073_orgnumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512221159524_disableteams.resx">
+      <DependentUpon>201512221159524_disableteams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512241452009_hipe.resx">
+      <DependentUpon>201512241452009_hipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512291016519_shareProfile.resx">
+      <DependentUpon>201512291016519_shareProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512300812457_shareOff.resx">
+      <DependentUpon>201512300812457_shareOff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601061319346_hipeCreationDate.resx">
+      <DependentUpon>201601061319346_hipeCreationDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601141052361_amountFeed.resx">
+      <DependentUpon>201601141052361_amountFeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601220848541_goalTypes.resx">
+      <DependentUpon>201601220848541_goalTypes.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>46243</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Hiper.Api</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+    <MonoDevelop>
+      <Properties>
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

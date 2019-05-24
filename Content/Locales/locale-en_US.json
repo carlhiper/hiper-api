@@ -1,0 +1,193 @@
+{
+    "Code": "en_US",
+    "Menu": {
+        "FEED": "FEED",
+        "SCOREBOARD": "SCOREBOARD",
+        "TEAM": "TEAM",
+        "PRIVATETEAM": "Private"
+    },
+    "Login": {
+        "Email": "EMAIL…",
+        "Password": "PASSWORD…",
+        "Login": "LOGIN",
+        "Submit": "LOGIN",
+        "CreateUser": "CREATE USER",
+        "ResetPassword": "RESET PASSWORD",
+        "LoginError": "Invalid Email or Password",
+        "Resend": "RESEND"
+    },
+    "CreateProfile": {
+        "FIRSTNAME": "FIRST NAME*…",
+        "LASTNAME": "LAST NAME*…",
+        "TITLE": "TITLE…",
+        "COMPANY": "COMPANY…",
+        "NICKNAME": "NICKNAME…",
+        "EMAIL": "EMAIL*…",
+        "PASSWORD": "PASSWORD*…",
+        "CONFIRMPASSWORD": "CONFIRM PASSWORD*…",
+        "ADDPICTURE": "PICTURE*…",
+        "CREATEUSER": "CREATE USER",
+        "ErrorRequired": "Field {name} is required",
+        "ErrorInvalidEmail": "Provided e-mail has wrong format",
+        "ErrorPasswordMin": "Password should be at least 6 characters",
+        "ErrorEmailTaken": "User with same e-mail already exist. Do you want to reset password ?"
+
+    },
+    "CreateTeam": {
+        "TEAMNAME": "TEAM NAME*…",
+        "PASSWORD": "PASSWORD*…",
+        "COMPANY": "COMPANY NAME*…",
+        "ORGNUMBER": "ORG. NUMBER*…",
+        "INVITE": "ADD INVITE",
+        "REMOVEINVITE": "REMOVE INVITE",
+        "BILLINGADDRESS": "BILLING ADDRESS*…",
+        "EMAIL": "EMAIL…",
+        "TEAMMEMBERS": "INVITE USER…",
+        "CREATETEAM": "CREATE TEAM",
+        "DONE": "DONE"
+    },
+    "CreateJoinTeam": {
+        "CREATEBUISINESS": "CREATE BUSINESS TEAM",
+        "CREATESTARTUP": "CREATE STARTUP TEAM*",
+        "CREATETEAM": "CREATE TEAM",
+        "JOINTEAM": "JOIN TEAM",
+        "JOINLATER": "JOIN LATER",
+        "CANCEL": "CANCEL"
+
+    },
+    "JoinTeam": {
+        "JOINTEAM": "JOIN TEAM",
+        "TEAMNAME": "TEAM NAME…",
+        "PASSWORD": "PASSWORD…",
+        "WRONGNAME": "Invalid Team Name or Password.",
+        "ErrorLoginError": "Invalid Team Name or Password."
+
+    },
+    "UserProfile": {
+        "GOALS": "GOALS",
+        "LEAVE": "LEAVE",
+        "PROFILE": "PROFILE",
+        "EDIT": "EDIT",
+        "TEAMS": "TEAMS",
+        "ADDTEAM": "ADD/JOIN TEAM",
+        "DeleteTeamOptions": "DELETE TEAM",
+        "DELETETEAMTITLE": "Delete team",
+        "JoinTeamSuccess": "Your invitation request has been sent to the team administrator.",
+        "JoinTeamSuccess": "Are you sure you want to leave team",
+        "DeleteTeamSuccess": "You have left team",
+        "ClickToView": "(Click to view)"
+    },
+    "Team": {
+        "ADDGOAL": "ADD GOAL",
+        "ADDMEMBER": "ADD MEMBER",
+        "DELETEMEMBER": "DELETE MEMBER",
+        "INVITEMEMBER": "INVITE MEMBER",
+        "CreateGoal": "CREATE GOAL",
+        "TeamOptions": "TEAM OPTIONS",
+        "APPLICANT": "ADD APPLICANT",
+        "AddMemberApplicants": "now are members of",
+        "AddMemberInviteTitle": "INVITE USER",
+        "AddMemberInviteOk": "Invitation email had been sent to",
+        "AddMemberInviteFailed": "Failed to invite",
+        "DeleteMemberTitle": "DELETE MEMBERS",
+        "DeleteMemberText": "Are you sure you want to delete",
+        "DeleteMemberOk": "are no longer members of teamName"
+    },
+    "Goal": {
+        "Goal": "GOAL",
+        "Description": "GOAL DESCRIPTION...",
+        "AdditionalInfo": "ADDITIONAL INFO...",
+        "Reached": "REACHED...",
+        "Total": "TARGET...",
+        "Target": "target",
+        "DateFormat": "dd - MM - yyyy",
+        "Save": "SAVE",
+        "Abort": "ABORT",
+        "CreatedOk": "You goal was successfully created",
+        "Deadline": "ENTER DEADLINE..."
+    },
+    "StatusOfGoal": {
+        "All": "All",
+        "Active": "Active",
+        "Cancel": "Cancel",
+        "Achieved": "Achieved",
+        "Didntachieved": "Didn`t achieve"
+
+    },
+    "TypeOfUpdate": {
+        "All": "All",
+        "AddedGoal": "Added a goal!",
+        "AchievedGoal": "Achieved a goal!",
+        "DidntAchievedGoal": "Didn't achieve the goal",
+        "CancelledGoal": "Cancelled a goal",
+        "IsNewMember": "Is a new team member!",
+        "LeftTeam": "Left the team",
+        "ReceivedNewGoal": "Received new goal!",
+        "MissedDeadline": "Missed a deadline!",
+        "OneWeekLeft": "Has one week left!",
+        "ThreeDaysLeft": "Has three days left",
+        "OneDayLeft": "Has one day left",
+        "Achieved25ofGoal": "Achieved 25% of goal",
+        "Achieved50ofGoal": "Achieved 50% of goal",
+        "Achieved75ofGoal": "Achieved 75% of goal"
+    },
+    "TypeOfGoal": {
+        "All": "All",
+        "succeed/fail": "Succeed/fail",
+        "number": "Number"
+    },
+    "Scoreboard": {
+        "Empty": "Empty personal goal",
+        "EmptyTeam": "Empty team goal",
+        "Deadline": "Deadline",
+        "Days": "days",
+		"Current": "ACTIVE",
+		"History": "HISTORY",
+        "Statistic": "STATISTICS",
+        "Ihadenoughtime": "I HAD ENOUGH TIME",
+        "Ihadtherightskills": "I HAD THE RIGHT SKILLS",
+        "Ihadenoughsupport": "I HAD ENOUGH SUPPORT",
+        "Ihadenoughresources": "I HAD ENOUGH RESOURCES",
+        "Last": "Last day"
+
+    },
+    "Filter": {
+        "Filter": "FILTER",
+        "goalcreated": "Goal created",
+        "deadline": "Deadline",
+        "filter": "Filter",
+        "feedback": "Feedback",
+        "status": "Status",
+        "teammember": "Team member",
+        "typeofgoal": "Type of goal",
+        "TypeOfUpdate": "Type of update",
+        "timespan": "Time span",
+        "all": "All",
+        "DateFormat": "MM/dd/yyyy",
+        "SelectTypeOfGoal": "Select type of goal",
+        "SelectTypeOfUpdate": "Select type of update",
+        "SelectTeamMember": "Select team member",
+        "Abort": "ABORT",
+        "Save": "SAVE"
+
+    },
+    "Messages": {
+        "WRONGNAMEORPASSWORD": "WRONG NAME OR PASSWORD",
+        "ORGNUMBERMIN": "Organization number must have the format 555555-5555",
+        "INVALIDINPUT": "INVALID INPUT",
+        "AREYOUSURE": "ARE YOU SURE?"
+    },
+    "Repeats": {
+        "1day": "1 day",
+        "1week": "1 week",
+        "1month": "1 month",
+        "Norepeat": "No repeat"
+    },
+    "Feedbacks": {
+        "All": "All",
+        "Ihadenoughtime": "I had enough time ",
+        "Ihadtherightskills": "I had the right skills",
+        "Ihadenoughsupport": "I had enough support",
+        "Ihadenoughresources": "I had enough resources"
+    }
+}
